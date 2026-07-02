@@ -1,0 +1,9 @@
+{
+  "name": "aem-dialog-builder",
+  "version": "1.0.0",
+  "description": "AEM Dialog Builder - Chrome Extension, VS Code Extension & Standalone Web App",
+  "scripts": {
+    "web": "open index.html",
+    "package-vscode": "cd vscode-extension && npx @vscode/vsce package"
+  }
+}

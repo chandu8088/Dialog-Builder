@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "AEM Dialog Builder",
+  "version": "1.0",
+  "description": "Build AEM dialog .content.xml files easily",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": []
+}

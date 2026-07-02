@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="clean">
+<head>
+  <meta charset="UTF-8">
+  <title>AEM Dialog XML Generator</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="theme-switcher">
+    <label>Theme:</label>
+    <div class="theme-dropdown" id="themeDropdown">
+      <button type="button" class="theme-dropdown-btn" id="themeDropdownBtn">
+        <span class="theme-swatch" id="currentSwatch"></span>
+        <span id="currentThemeName">Clean Light</span>
+        <span class="theme-arrow">&#9662;</span>
+      </button>
+      <div class="theme-dropdown-menu" id="themeMenu"></div>
+    </div>
+  </div>
+
+  <h1>AEM Dialog XML Generator</h1>
+
+  <div class="main-layout">
+    <!-- Left: Builder Panel -->
+    <div class="builder-panel">
+      <div class="dialog-title-row">
+        <div>
+          <label>Dialog Title:</label>
+          <input id="dialogTitle" type="text" placeholder="Dialog Title" />
+        </div>
+        <div class="xml-upload-group">
+          <label for="xmlFileInput">Import XML:</label>
+          <input type="file" id="xmlFileInput" accept="*/*" />
+          <button id="xmlPasteBtn" type="button">Paste XML</button>
+          <button id="xmlProceedBtn" type="button">Proceed</button>
+        </div>
+        <div class="xml-upload-tip">Tip: Press ⌘+Shift+. in file dialog to show hidden files</div>
+      </div>
+      <div id="xmlPasteArea" class="xml-paste-area" style="display:none;">
+        <label>Paste your .content.xml here:</label>
+        <textarea id="xmlPasteInput" rows="8" placeholder="<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#10;<jcr:root ...>&#10;  ...&#10;</jcr:root>"></textarea>
+      </div>
+      <div id="xmlErrors" class="xml-errors" style="display:none;"></div>
+
+      <button id="addTabBtn">+ Add Tab</button>
+      <div id="tabs"></div>
+
+      <h3>Generated XML:</h3>
+      <textarea id="xmlOutput" rows="15" cols="80"></textarea>
+      <br />
+      <button id="downloadBtn">Download XML</button>
+    </div>
+
+    <!-- Right: AEM Preview Panel -->
+    <div class="preview-panel">
+      <div class="preview-header">
+        <span class="preview-title">AEM Dialog Preview</span>
+        <span class="preview-badge">LIVE</span>
+      </div>
+      <div class="aem-dialog" id="aemPreview">
+        <div class="aem-dialog-empty">Add tabs and fields to see the preview</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

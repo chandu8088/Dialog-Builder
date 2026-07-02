@@ -1,0 +1,58 @@
+{
+  "name": "aem-dialog-builder",
+  "displayName": "AEM Dialog Builder",
+  "description": "Build AEM dialog .content.xml files visually with live preview, XML import/export, and 17 themes",
+  "version": "1.1.0",
+  "publisher": "chandrashekhar",
+  "author": {
+    "name": "Chandrashekhar",
+    "email": "chandra10299@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/aem-dialog-builder"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other", "Visualization"],
+  "keywords": ["aem", "adobe", "dialog", "xml", "content", "coral", "granite", "sling"],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "icon": "icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aemDialogBuilder.open",
+        "title": "AEM Dialog Builder: Open",
+        "icon": "$(file-code)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aem-dialog-builder",
+          "title": "AEM Dialog Builder",
+          "icon": "$(file-code)"
+        }
+      ]
+    },
+    "views": {
+      "aem-dialog-builder": [
+        {
+          "type": "webview",
+          "id": "aemDialogBuilder.sidebarView",
+          "name": "AEM Dialog Builder",
+          "icon": "$(file-code)"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.22.0"
+  }
+}
